@@ -10,4 +10,4 @@ console.log(var3);
 console.log("type of 'var3' variable is "+ typeof var3);
 var var4 = "1000.10";
 console.log(var4);
-console.log("type of 'var4' variable is "+ typeof var4);
+console.log("type of 'var4' variable is "+ typeof var4); 
