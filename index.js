@@ -1,6 +1,6 @@
 var var1 = "hello's world";
 console.log(var1);
-//typeof keyword 
+//typeof keyword finds out what is the type of variable
 console.log("type of 'var1' variable is "+ typeof var1);
 var var2 = 1000;
 console.log(var2);
