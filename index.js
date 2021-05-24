@@ -18,6 +18,8 @@ const asterisk = "*";
 // GET INPUT from user
 let input = require('readline-sync');
 astronautCount = input.question("Enter number of Astronauts ");
+
+// Calculate crewmass and total mass
 crewMassKg = astronautCount * averageAstronautMassKg;
 totalMassKg = crewMassKg + fuelMassKg + shuttleMassKg;
 
