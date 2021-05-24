@@ -1,13 +1,9 @@
-var str = "hello's world";
-console.log(str);
-var addresult = 3+4;
-str.concat(addresult);
-console.log('Coding Rocks');
-console.log("Coding Rocks");
-console.log("testing");
-console.log('Hello, JavaScript.');
-console.log(2001);
-
-
-console.log("testing\ttab\nand\nnewline");
+// Append string using commas
+console.log("What","do","commas","do?"); 
+// adding space doesn't affect result
+console.log("Does", "adding",      "space", "matter?"); 
+//using + symbol to append
+console.log('Launch' + 'Code'); 
+//Using comma with quotes to append
+console.log("LaunchCode was founded in", 2013); 
 
