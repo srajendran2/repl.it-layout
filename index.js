@@ -18,6 +18,8 @@ console.log("type of 'var4' variable is "+ typeof var4);
 console.log(Number("123 "));
 console.log(typeof Number("123 "));
 console.log(Number(17));
+console.log(Number("-123 "));
+console.log(Number("+123 "));
 
 // Number NaN - Not A Number
 console.log(Number("123a"));
