@@ -1,46 +1,65 @@
 // define variables
-const shuttleName = "Determination";
-let shuttleSpeed = 17500;
-let distanceToMars = 225000000;
-let distanceToMoon = 384000;
-let milesPerKilometer = 0.621;
+let date = "Monday 2019-03-18";
+let time = "10:05:34 AM";
+let astronautCount = 0;
+let astronautStatus = "ready";
+let averageAstronautMassKg = 80.7
+let crewMassKg = 0;
+let totalMassKg = 0;
+let fuelMassKg = 76000;
+let shuttleMassKg	= 74842.31;
+let fuelTempCelsius = -225;
+let fuelLevel = "100%";
+let weatherStatus = "clear";
+const dashDisplay = "------------------------------------------";
+const symbol = ">";
+const asterisk = "*";
 
-// identify data type 
-let v1 = typeof(shuttleName);
-console.log(v1);
+// GET INPUT from user
+let input = require('readline-sync');
+astronautCount = input.question("Enter number of Astronauts ");
+crewMassKg = astronautCount * averageAstronautMassKg;
+totalMassKg = crewMassKg + fuelMassKg + shuttleMassKg;
 
-v1 = typeof(shuttleSpeed);
-console.log(v1);
+//format output and print
+console.log(dashDisplay);
+console.log(symbol + " LC04 - LAUNCH CHECKLIST");
+console.log(dashDisplay);
+console.log("Date: " + date);
+console.log("Time: " + time);
+console.log("");
 
-v1 = typeof(distanceToMars);
-console.log(v1);
+console.log(dashDisplay);
+console.log(symbol + " ASTRONAUT INFO");
+console.log(dashDisplay);
+console.log(asterisk + " count "  + astronautCount);
+console.log(asterisk + " status " + astronautStatus );
+console.log("");
 
-v1 = typeof(distanceToMoon);
-console.log(v1);
+console.log(dashDisplay);
+console.log(symbol + " FUEL DATA");
+console.log(dashDisplay);
+console.log(asterisk + " Fuel temp celsius "  + fuelTempCelsius);
+console.log(asterisk + " Fuel level " + fuelLevel );
+console.log("");
 
-v1 = typeof(milesPerKilometer);
-console.log(v1);
+console.log(dashDisplay);
+console.log(symbol + " MASS DATA");
+console.log(dashDisplay);
+console.log(asterisk + " Crew mass: "  + crewMassKg + " kg");
+console.log(asterisk + " Fuel mass: " + fuelMassKg + " kg");
+console.log(asterisk + " Shuttle mass: " + shuttleMassKg + " kg");
+console.log(asterisk + " Total mass: " + totalMassKg + " kg");
+console.log("");
 
-// calculate miles to mars
-let milesToMars = distanceToMars * milesPerKilometer;
-console.log(milesToMars);
+console.log(dashDisplay);
+console.log(symbol + " FLIGHT PLAN");
+console.log(dashDisplay);
+console.log(asterisk + " Weather: "  + weatherStatus);
+console.log("");
 
-// calculate hours to mars
-let hoursToMars = milesToMars / shuttleSpeed;
-console.log(hoursToMars);
-
-// days to mars
-let daysToMars = hoursToMars / 24;
-console.log(shuttleName + " will take " + daysToMars + " days to reach Mars");
-
-// calculate miles to moon
-let milesToMoon = distanceToMoon * milesPerKilometer;
-console.log(milesToMoon);
-
-// calculate hours to moon
-let hoursToMoon = milesToMoon / shuttleSpeed;
-console.log(hoursToMoon);
-
-// days to moon
-let daysToMoon = hoursToMoon / 24;
-console.log(shuttleName + " will take " + daysToMoon + " days to reach Moon");
+console.log(dashDisplay);
+console.log(symbol + " OVERALL STATUS");
+console.log(dashDisplay);
+console.log(asterisk + " Clear for takeoff: "  + "YES");
+console.log("");
