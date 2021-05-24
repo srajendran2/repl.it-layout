@@ -20,6 +20,8 @@ console.log(typeof Number("123 "));
 console.log(Number(17));
 console.log(Number("-123 "));
 console.log(Number("+123 "));
+console.log(Number("1 3"));
+console.log(Number("one"));
 
 // Number NaN - Not A Number
 console.log(Number("123a"));
