@@ -45,6 +45,7 @@ console.log(6 <= 6);
 console.log(8 != 6);
 console.log('true' == "true");
 
+
 //condition false
 console.log(5 == 6);
 console.log(true == "true");
@@ -60,3 +61,14 @@ console.log(0 == '');
 console.log('0' == 0);
 console.log(0 == '');
 console.log('0' == '');
+
+//strictly equal === false conditions
+console.log(7 === "7");
+console.log(0 === false);
+console.log(0 === '');
+
+//strictly equal === true conditions
+console.log('a' === 4);
+
+console.log(9 != "8");
+console.log(6 !== "8");
