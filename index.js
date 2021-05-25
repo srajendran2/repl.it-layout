@@ -1,67 +1,56 @@
-// define variables
-let date = "Monday 2019-03-18";
-let time = "10:05:34 AM";
-let astronautCount = 0;
-let astronautStatus = "ready";
-let averageAstronautMassKg = 80.7
-let crewMassKg = 0;
-let totalMassKg = 0;
-let fuelMassKg = 76000;
-let shuttleMassKg	= 74842.31;
-let fuelTempCelsius = -225;
-let fuelLevel = "100%";
-let weatherStatus = "clear";
-const dashDisplay = "------------------------------------------";
-const symbol = ">";
-const asterisk = "*";
+//boolean values are true and false. It is case sensitive
+console.log(true);
+console.log(typeof true);
+console.log(typeof false);
 
-// GET INPUT from user
-let input = require('readline-sync');
-astronautCount = input.question("Enter number of Astronauts ");
+// below True / False are not identified as boolean as they're not lowercase
+console.log(typeof True);
+console.log(typeof False);
 
-// Calculate crewmass and total mass
-crewMassKg = astronautCount * averageAstronautMassKg;
-totalMassKg = crewMassKg + fuelMassKg + shuttleMassKg;
+// below is identified as string
+console.log(typeof "true");
 
-//format output and print
-console.log(dashDisplay);
-console.log(symbol + " LC04 - LAUNCH CHECKLIST");
-console.log(dashDisplay);
-console.log("Date: " + date);
-console.log("Time: " + time);
-console.log("");
+//converting other datatypes to boolean can be done using Boolean function
+//any variable with value is considered true
+console.log(Boolean("true"));
+console.log(Boolean("TRUE"));
+console.log(Boolean(1));
+console.log(Boolean('LaunchCode'));
 
-console.log(dashDisplay);
-console.log(symbol + " ASTRONAUT INFO");
-console.log(dashDisplay);
-console.log(asterisk + " count "  + astronautCount);
-console.log(asterisk + " status " + astronautStatus );
-console.log("");
+//any variable without value is considered false. zero is also considered no value
+console.log(Boolean(0));
+console.log(Boolean(''));
 
-console.log(dashDisplay);
-console.log(symbol + " FUEL DATA");
-console.log(dashDisplay);
-console.log(asterisk + " Fuel temp celsius "  + fuelTempCelsius);
-console.log(asterisk + " Fuel level " + fuelLevel );
-console.log("");
+// undefined variable
+var x;
+console.log(Boolean(x)); 
 
-console.log(dashDisplay);
-console.log(symbol + " MASS DATA");
-console.log(dashDisplay);
-console.log(asterisk + " Crew mass: "  + crewMassKg + " kg");
-console.log(asterisk + " Fuel mass: " + fuelMassKg + " kg");
-console.log(asterisk + " Shuttle mass: " + shuttleMassKg + " kg");
-console.log(asterisk + " Total mass: " + totalMassKg + " kg");
-console.log("");
+// null variable
+var y = null;
+console.log(Boolean(y)); 
 
-console.log(dashDisplay);
-console.log(symbol + " FLIGHT PLAN");
-console.log(dashDisplay);
-console.log(asterisk + " Weather: "  + weatherStatus);
-console.log("");
+// false
+var z = false;
+console.log(Boolean(z)); 
 
-console.log(dashDisplay);
-console.log(symbol + " OVERALL STATUS");
-console.log(dashDisplay);
-console.log(asterisk + " Clear for takeoff: "  + "YES");
-console.log("");
+// NaN
+var w = 10 / "H";
+console.log(Boolean(w)); 
+
+//condition true
+console.log(5 == 5);
+console.log(5 < 6);
+console.log(6 >= 6);
+console.log(6 <= 6);
+console.log(8 != 6);
+console.log('true' == "true");
+
+//condition false
+console.log(5 == 6);
+console.log(true == "true");
+console.log(5 > 6);
+
+//exception conditions -> Even though values are not equal, we get true
+console.log(7 == "7");
+console.log(0 == false);
+console.log(0 == '');
