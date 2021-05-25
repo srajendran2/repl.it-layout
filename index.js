@@ -51,6 +51,12 @@ console.log(true == "true");
 console.log(5 > 6);
 
 //exception conditions -> Even though values are not equal, we get true
+// it is because == operator does conversion to same datatypes before comparing values
 console.log(7 == "7");
 console.log(0 == false);
 console.log(0 == '');
+
+// if A == B, B == C, A == C. But it is not the case in below scenario. So it is better not to use == operator for equality check
+console.log('0' == 0);
+console.log(0 == '');
+console.log('0' == '');
