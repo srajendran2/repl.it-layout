@@ -71,4 +71,9 @@ console.log(0 === '');
 console.log('a' === 4);
 
 console.log(9 != "8");
-console.log(6 !== "8");
+
+// data type is different in below case. so it returns true as it doesn't match
+console.log(8 !== "8");
+
+// data type is same in below case. so it returns flase as it match
+console.log(8 !== 8);
