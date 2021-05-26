@@ -1,43 +1,76 @@
-let billIsDue = true;
-if (billIsDue) {
-  console.log("Bill is due soon!");
-};
-
-
-billIsDue = false;
-if (!billIsDue){
-  console.log("Bill is not due soon!");
-};
+let engineIndicatorLight = "red blinking";
+let spaceSuitsOn = true;
+let shuttleCabinReady = true;
+let crewStatus = (spaceSuitsOn && shuttleCabinReady);
+let computerStatusCode = 200;
+let shuttleSpeed =15000;
+let commandOverride = true;
 
 let input = require('readline-sync');
-let number1 = input.question("enter a number ");
+let fuelLevel = input.question("Enter fuel level: ");
+let engineTemperature = input.question("Enter Engine temperature: ");
+engineIndicatorLight = input.question("Enter Engine indicator light: ");
+commandOverride = input.question("Enter commandOverride: ");
 
-// if with else condition
-if (number1 % 2 === 0){
-  console.log("The number is even");
-}
-else
-  console.log("The number is odd");
-;
-
-// if, elseif and else condition
-if (number1 > 10){
-  console.log("number is > 10");
-}
-else if(number1 > 5){
-  console.log("number is > 5");
-}
-else if(number1 > 0){
-  console.log("number is > 0");
+if (engineIndicatorLight === "green") {
+   console.log("engines have started");
+} else if (engineIndicatorLight === "green blinking") {
+   console.log("engines are preparing to start");
+} else {
+   console.log("engines are off");
 };
 
-// nested if
-if (number1 % 2 === 0){
-  console.log("The number is even");
-  if (number1 > 0){
-     console.log("The number is positive");
-  }
-  else{
-    console.log("The number is negative")
-  }
+if (crewStatus = true){
+    console.log("Crew Ready");
+}
+else{
+    console.log("Crew Not Ready");
+};
+
+if (computerStatusCode === 200){
+    console.log("Please stand by. Computer is rebooting.");
+}else if(computerStatusCode === 400){
+    console.log("Success! Computer online.");
+}else{
+    console.log("ALERT: Computer offline!");
+};
+
+if (shuttleSpeed > 17500){
+    console.log("ALERT: Escape velocity reached!");
+} else if (shuttleSpeed < 8000){
+    console.log("ALERT: Cannot maintain orbit!");  
+} else{
+    console.log("Stable speed");   
+};
+
+if (crewStatus && computerStatusCode === 200 && spaceSuitsOn) {
+   console.log("all systems go");
+} else {
+   console.log("WARNING. Not ready");
+};
+
+if (!crewStatus || computerStatusCode !== 200 || !spaceSuitsOn) {
+   console.log("WARNING. Not ready");
+} else {
+   console.log("all systems go");
+};
+
+if (fuelLevel > 20000 && engineTemperature <= 2500){
+  console.log("Full tank. Engines good.");
+} else if (fuelLevel > 10000 && engineTemperature <= 2500){
+  console.log("Fuel level above 50%.  Engines good.");
+} else if (fuelLevel > 5000 && engineTemperature <= 2500){
+  console.log("Fuel level above 25%. Engines good.");   
+} else if (fuelLevel <= 5000 && engineTemperature > 2500){
+  console.log("Check fuel level. Engines running hot.");
+} else if (fuelLevel < 1000 || engineTemperature > 3500 || engineIndicatorLight === "red blinking"){
+  console.log("ENGINE FAILURE IMMINENT!");  
+} else {
+  console.log("Fuel and engine status pending...");  
+};
+
+if((fuelLevel > 20000 && engineIndicatorLight !== "red blinking") || commandOverride === true){
+  console.log("Cleared to launch!");  
+} else {
+  console.log("Launch scrubbed!");    
 }
