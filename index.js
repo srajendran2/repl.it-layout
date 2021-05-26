@@ -1,25 +1,43 @@
-//logical and
-console.log(5 === 7 && 7 === 8);
-console.log(7 === 7 && 5 === 5);
-console.log(5 === 7 && 5 === 5);
+let billIsDue = true;
+if (billIsDue) {
+  console.log("Bill is due soon!");
+};
 
-// logical or
-console.log(7 > 5 || 5 > 3);
-console.log(7 > 5 || 2 > 3);
-console.log(2 > 3 || 'dog' === 'cat');
 
-// logical not reverses the boolean value
-console.log(! true);
-console.log(! false);
-console.log( !(5 > 7) );
-console.log( !('dog' === 'cat') );
+billIsDue = false;
+if (!billIsDue){
+  console.log("Bill is not due soon!");
+};
 
-//Precedence	    Category	                              Operators
-//(highest)	      Logical NOT	                            !
-//                Exponentiation	                        **
-//                Multiplication and division	            *, /, %
-//                Addition and subtraction	              +, -
-//                Comparison	                            <=, >=, >, <
-//                Equality                              	===, !==, ==, !=
-//                Logical AND	                            &&
-//(lowest)	      Logical OR	                            ||
+let input = require('readline-sync');
+let number1 = input.question("enter a number ");
+
+// if with else condition
+if (number1 % 2 === 0){
+  console.log("The number is even");
+}
+else
+  console.log("The number is odd");
+;
+
+// if, elseif and else condition
+if (number1 > 10){
+  console.log("number is > 10");
+}
+else if(number1 > 5){
+  console.log("number is > 5");
+}
+else if(number1 > 0){
+  console.log("number is > 0");
+};
+
+// nested if
+if (number1 % 2 === 0){
+  console.log("The number is even");
+  if (number1 > 0){
+     console.log("The number is positive");
+  }
+  else{
+    console.log("The number is negative")
+  }
+}
