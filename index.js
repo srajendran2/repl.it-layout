@@ -1,44 +1,93 @@
-// Syntax error - the console log bracket is not closed
-let day = Wednesday;
-console.log(day;
+let launchReady = false;
+let fuelLevel = 17000;
 
-let name = Julie;
-console.log("Hello, name);
+if (fuelLevel >= 20000) {
+   console.log('Fuel level cleared.');
+   launchReady = true;
+} else {
+   console.log('WARNING: Insufficient fuel!');
+   launchReady = false;
+}
 
-// Runtime error - the variable used in console log is not defined
-let firstName = "Jack";
-console.log(firstname);
+launchReady = false;
+let crewStatus = true;
+let computerStatus = 'green';
 
-let name = Julie;  // Julie should be in quotes
-console.log("Hello", name);
+if (crewStatus && computerStatus === 'green') {
+   console.log('Crew & computer cleared.');
+   launchReady = true;
+} else {
+   console.log('WARNING: Crew or computer not ready!');
+   launchReady = false;
+}
 
-// Logical error 
-// considering work week is 5 days only, using 7 is considered incorrect in below use case
-let weeklyPay = 600;
-let dailyEarnings = weeklyPay / 7;
-console.log(dailyEarnings);
+if (launchReady) {
+   console.log("10, 9, 8, 7, 6, 5, 4, 3, 2, 1...");
+   console.log("Fed parrot...");
+   console.log("Ignition...");
+   console.log("Liftoff!");
+} else {
+   console.log("Launch scrubbed.");
+};
 
-// types of error
-// SyntaxError - Occurs when trying to parse syntactically invalid code.
-    // console.log("hello";
+launchReady = false;
+fuelLevel = 17000;
 
+if (fuelLevel >= 20000) {
+   console.log('Fuel level cleared.');
+   launchReady = true;
+} else {
+   console.log('WARNING: Insufficient fuel!');
+   launchReady = false;
+}
 
-// ReferenceError	- Occurs when a non-existent variable is used/referenced.	
-    // let firstName = "Jack";
-    // console.log(firstname); 
+launchReady = false;
+fuelLevel = 27000;
 
+if (fuelLevel >= 20000) {
+   console.log('Fuel level cleared.');
+   launchReady = true;
+} else {
+   console.log('WARNING: Insufficient fuel!');
+   launchReady = false;
+}
 
-// TypeError - Occurs when trying to use a value in an invalid way.	
-   //1(); 
+if (launchReady) {
+   console.log("10, 9, 8...");
+   console.log("Fed parrot...");
+   console.log("6, 5, 4...");
+   console.log("Ignition...");
+   console.log("3, 2, 1...");
+   console.log("Liftoff!");
+} else {
+   console.log("Launch scrubbed.");
+}
 
+launchReady = false;
+fuelLevel = 17000;
+crewStatus = true;
+computerStatus = 'green';
 
-// RangeError - Occurs when passing an invalid value to a function.	
-  //  let nums = Array(-1);
+if (fuelLevel >= 20000) {
+   console.log('Fuel level cleared.');
+   fuelAvailable = true;
+} else {
+   console.log('WARNING: Insufficient fuel!');
+   fuelAvailable = false;
+}
 
+if (crewStatus && computerStatus === 'green'){
+   console.log('Crew & computer cleared.');
+   launchReady = true;
+} else {
+   console.log('WARNING: Crew or computer not ready!');
+   launchReady = false;
+}
 
-// URIError - Occurs when improperly using a global URI-handling function. ('URI' = Uniform Resource Identifier)	
-  //  decodeURI('%');
+if (launchReady && fuelAvailable) {
+   console.log('10, 9, 8, 7, 6, 5, 4, 3, 2, 1...');
+   console.log('Liftoff!');
+} else {
+   console.log('Launch scrubbed.');
+}
 
-  
-// Error - The type from which all other errors are built. It can be used to generate programmer-triggered and programmer-defined errors.	
-  //  throw Error("Something bad happened!");
