@@ -1,19 +1,19 @@
-// string can be considered collection of characters
-// each character can be accessed by its position. 0 is start
-let str1 = "Strings";
-console.log(str1[0]);
-console.log(str1[1]);
-console.log(str1[2]);
-console.log(str1[3]);
-console.log(str1[4]);
-console.log(str1[5]);
-console.log(str1[6]);
+// Strings are objects and they have certain functions / methods // associated with it
+// length function
+let s1 = "This is a long string";
+console.log(s1.length);
 
-//non existing index value will return "undefined"
-console.log(str1[-1]);
-console.log(str1[8]);
+// lowercase function
+console.log(s1.toLowerCase());
 
-//length can be calculated using length function
-console.log(str1.length);
+// Uppercase function
+console.log(s1.toUpperCase());
 
+//slice
+console.log(s1.slice(0,3));
 
+//substr (start,length)
+console.log(s1.substr(0,3))
+
+//substring(start,end)
+console.log(s1.substring(1,3))
