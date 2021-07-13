@@ -12,3 +12,9 @@ let nonprofit1 = "Launchcode";
 nonprofit1 = "LaunchCode";
 
 console.log(nonprofit1);
+
+// Appending values is not changing the string
+let pet = 'cat';
+console.log(pet + 's');
+pet += 's';
+console.log(pet); 
