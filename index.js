@@ -1,19 +1,14 @@
-// Strings are objects and they have certain functions / methods // associated with it
-// length function
-let s1 = "This is a long string";
-console.log(s1.length);
+//Strings are immutable, once value is given it cannot be changed
+// c in lower case is being changed to "C" in below example. It is // not possible
 
-// lowercase function
-console.log(s1.toLowerCase());
+let nonprofit = "Launchcode";
 
-// Uppercase function
-console.log(s1.toUpperCase());
+console.log(nonprofit);
+nonprofit[6] = "C";
+console.log(nonprofit);
 
-//slice
-console.log(s1.slice(0,3));
+//String variables can still be changed. The reference to the    // value on the memory will change. Old value will be on the same // place in the memory, once a new value is assigned to variable, // it will start refering to new value 
+let nonprofit1 = "Launchcode";
+nonprofit1 = "LaunchCode";
 
-//substr (start,length)
-console.log(s1.substr(0,3))
-
-//substring(start,end)
-console.log(s1.substring(1,3))
+console.log(nonprofit1);
