@@ -1,31 +1,12 @@
-// Strings are objects and they have certain functions / methods // associated with it
-// length function
-let s1 = " This is a long string  ";
-console.log(s1.length);
+// way to translate between characters and integers
+// the most recent versions of the Unicode character encoding    // include emoji characters, such as 🌮.
+//--------------------------------------------------------------
+// ASCII maps a to 97, b to 98, and so on for lowercase letters, // with z mapping to 122. Uppercase letters map to the values 65  // through 90. The other integers between 0 and 127 represent    // symbols, punctuation, and other assorted odd characters. 
+//---------------------------------------------------------------
+//The string method charCodeAt takes an index and returns the    // ASCII code of the character at that index.
+let s1 = "This is ASCII encoding";
+console.log(s1.charCodeAt(5));
+console.log(s1.charCodeAt(0));
 
-// lowercase function
-console.log(s1.toLowerCase());
-
-// Uppercase function
-console.log(s1.toUpperCase());
-
-//slice
-console.log(s1.slice(0,3));
-
-//substr (start,length)
-console.log(s1.substr(0,3))
-
-//substring(start,end)
-console.log(s1.substring(1,3))
-
-//trim - removes trailing and leading spaces
-let t1=s1.trim();
-let l1=t1.length;
-
-console.log(t1,l1);
-
-//indexof returns the first occurrence position of substr 
-console.log(s1.indexOf("long"));
-
-//replace chars - copy the string and replace chars
-console.log(s1.replace("long", "short"));
+let n1=122;
+console.log(String.fromCharCode(n1));
