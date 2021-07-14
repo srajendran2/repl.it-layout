@@ -1,10 +1,20 @@
-// \n - new line
-// \t - tab
-console.log("A message\nbroken across lines,\n\tand indented");
+// the back tick character ` allows variables to be included as part of output
 
-// \uXXXX - unicode
-console.log("The interrobang character, \u203d, combines ? and !");
-console.log("The character, \u00C9");
+let name = "Jack";
+let currentAge = 9;
+// normal output
+console.log("Next year, " + name + " will be " + (currentAge + 1) + ".");
 
-// use escape character \ to include quotes in string
-console.log("\"The dog's favorite toy is a stuffed hedgehog,\" said Chris");
+// back tick used output
+console.log(`Next year, ${name} will be ${currentAge + 1}.`);
+
+// back tick allows multi-line output without using \n
+let poem = `The mind chases happiness.
+The heart creates happiness.
+The soul is happiness
+And it spreads happiness
+All-where.
+
+– Sri Chinmoy`;
+
+console.log(poem);
