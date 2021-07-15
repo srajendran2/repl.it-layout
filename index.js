@@ -1,37 +1,39 @@
-console.log("Wonderful".length);
-console.log('JavaScript'[8]);
-console.log("Strings are sequences of characters."[5]);
-console.log("Do spaces count?".length);
-// length of integer
-n1 = 20000;
-s1 = String(n1);
-console.log(s1.length);
-// chars after decimal
-n2 = 200.12;
-s2 = String(n2);
-console.log(s2.slice((s2.indexOf(".")+1),s2.length));
-if (s2.includes(".") === true){
-  console.log("It is decimal");
-} else {
-  console.log("it is integer");
-}
-// remove trailing leading spaces, convert to upper
-dna = " TCG-TAC-gaC-TAC-CGT-CAG-ACT-TAa-CcA-GTC-cAt-AGA-GCT    "
-d1 = dna.trim().toUpperCase()
-dna = d1;
-console.log(dna);
-// Replace the sequence 'GCT' with 'AGG', and then print the      // altered strand.
-console.log(dna.replace("GCT","AGG"));
-// Look for the sequence 'CAT' with indexOf(). If found print,    // 'CAT found', otherwise print, 'CAT NOT found'.
-if (dna.indexOf("CAT") > 0){
-  console.log("CAT found");
-} else if (dna.indexOf("CAT") === -1){
-  console.log("CAT NOT found");
-}
-// Use slice() to print out the fifth set of 3 characters (called // a codon) from the DNA strand.
-console.log(dna.slice(16,19));
-// use template literal
-dnaLength = dna.length;
-console.log(`The DNA strand is ${dnaLength} characters long.`);
+// declare array
+let emptyArray = [];
+let programmingLanguages = ["JavaScript", "Python", "Java", "C#"];
 
+// declare multiline
+let javaScriptFrameworks = [
+   "React",     //index 0
+   "Angular",   //index 1
+   "Ember",     //index 2
+   "Vue"        //index 3
+];
 
+// array length
+console.log(programmingLanguages.length);
+console.log(javaScriptFrameworks.length);
+
+// Array can hold different data types
+let grabBag = ["A string value", true, 99, 105.5];
+console.log(grabBag.length);
+
+let classes = ["science, computer, art"];
+console.log(classes.length);
+
+let teachers = ["Jones", "Willoughby", "Rhodes"];
+console.log(teachers.length);
+
+console.log(javaScriptFrameworks[0]);
+console.log(javaScriptFrameworks[1]);
+console.log(javaScriptFrameworks[2]);
+console.log(javaScriptFrameworks[3]);
+console.log(javaScriptFrameworks[-1]);
+console.log(javaScriptFrameworks[4]);
+
+// update array with new values or change an existing value
+javaScriptFrameworks[4] = "test";
+javaScriptFrameworks[3] = "vue1";
+console.log(javaScriptFrameworks[3]);
+console.log(javaScriptFrameworks[4]);
+console.log(javaScriptFrameworks.length);
