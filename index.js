@@ -1,35 +1,34 @@
-//two dimensional array
-let shuttleCrews = [
-   ['Robert Gibson', 'Mark Lee', 'Mae Jemison'],
-   ['Kent Rominger', 'Ellen Ochoa', 'Bernard Harris'],
-   ['Eilen Collins', 'Winston Scott',  'Catherin Coleman']
-];
+// Add new items to array separately and combined
+let practiceFile = [273.15];
 
-console.log(shuttleCrews[0][2]);
-console.log(shuttleCrews[1][1]);
-console.log(shuttleCrews[2][1]);
+practiceFile.push(42);
+console.log(practiceFile);
+
+practiceFile.push("hello");
+console.log(practiceFile);
+
+practiceFile.push(false, -4.6, "87");
+console.log(practiceFile);
 
 
-let newCrew = ['Mark Polansky', 'Robert Curbeam', 'Joan Higginbotham'];
+let cargoHold = ['oxygen tanks', 'space suits', 'parrot', 'instruction manual', 'meal packs', 'slinky', 'security blanket'];
 
-// Add a new crew array to the end of shuttleCrews
-shuttleCrews.push(newCrew);
-console.log(shuttleCrews[3][2]);
+// replace slinky with space tether
+cargoHold.splice(5,1,'space tether');
+console.log(cargoHold);
 
-// Reverse the order of the crew at index 1
-shuttleCrews[1].reverse();
-console.log(shuttleCrews[1]);
+//remove the last item and display array and removed item
+console.log(cargoHold.pop());
+console.log(cargoHold);
 
-let school = [
-   ["science", "computer", "art"],
-   ["Jones", "Willoughby", "Rhodes"]
-];
+//remove the first item 
+console.log(cargoHold.shift());
+console.log(cargoHold);
 
-//display jones
-console.log(school[1][0]);
+//add 1138 to start of array and 20 meters to last
+cargoHold.unshift(1138);
+console.log(cargoHold);
+cargoHold.push("20 meters");
+console.log(cargoHold);
 
-// add a new row in two dimensional school array
-school.push(["dance"]);
-school[2][1]=("Holmes");
-console.log(school);
-
+console.log(`The array ${cargoHold} has a length of ${cargoHold.length}.`);
