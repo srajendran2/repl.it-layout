@@ -30,3 +30,4 @@ console.log(Number("123a"));
 console.log(String(17));
 console.log(typeof String(17));
 console.log(String("..."));
+console.log(String());
