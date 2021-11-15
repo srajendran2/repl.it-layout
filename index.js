@@ -51,16 +51,28 @@ console.log(modulusResult);
 // pre assignment increment
 let preincrementResult = ++a1;
 console.log(preincrementResult);
+console.log(a1);
+
+// pre assignment decrement
+let predeccrementResult = --a1;
+console.log(preincrementResult);
+console.log(a1);
 
 // post assignment increment
 let postincrementResult = a2++;
 console.log(postincrementResult);
+console.log(a2);
+
+// post assignment decrement
+let postdecrementResult = a2--;
+console.log(postincrementResult);
+console.log(a2);
 
 //order of operation can be determined using PEDMAS
 //P = parentheses
 //E = exponentiation
-//M = multiplication
 //D = division
+//M = multiplication
 //A = addition
 //S = subtraction
 
