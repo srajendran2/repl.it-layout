@@ -1,3 +1,27 @@
+
+// usage of let to declare variables
+let message = "What's up, Doc?";
+let n = 17;
+let pi = 3.14159;
+
+console.log(message);
+console.log(n);
+console.log(pi);
+
+console.log(typeof message);
+console.log(typeof n);
+console.log(typeof pi);
+
+// reassign values after declaring using let
+let day = "Thursday";
+console.log(day);
+
+day = "Friday";
+console.log(day);
+
+day = 21;
+console.log(day);
+
 // addition between two numbers
 let a1 = 10;
 let a2 = 20;
