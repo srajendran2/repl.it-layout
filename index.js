@@ -98,6 +98,6 @@ console.log(y);
 z *= 1;
 console.log(z);
 
-// w = w * 1
+// w = w / 1
 w /= 1;
 console.log(w);
