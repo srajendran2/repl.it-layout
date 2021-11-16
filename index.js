@@ -15,7 +15,7 @@ console.log(s1.slice(0,3));
 //substr (start,length)
 console.log(s1.substr(0,3))
 
-//substring(start,end)
+//substring(start pos,end pos)
 console.log(s1.substring(1,3))
 
 //trim - removes trailing and leading spaces
