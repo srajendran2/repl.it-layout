@@ -3,6 +3,9 @@
 let s1 = "This is a long string";
 console.log(s1.length);
 
+// type of for string variable
+console.log(typeof s1);
+
 // lowercase function
 console.log(s1.toLowerCase());
 
@@ -17,3 +20,6 @@ console.log(s1.substr(0,3))
 
 //substring(start,end)
 console.log(s1.substring(1,3))
+
+// console is an object provided by javascript
+console.log(typeof console);
