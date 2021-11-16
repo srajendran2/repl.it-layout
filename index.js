@@ -3,7 +3,7 @@
 // console is an object provided by javascript
 console.log(typeof console);
 
-// length function
+// length function, every string has length function
 let s1 = "This is a long string";
 console.log(s1.length);
 
