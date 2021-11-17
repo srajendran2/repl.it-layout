@@ -7,6 +7,7 @@ let a5 = [4,3,5];
 // concat - joins multiple arrays to create a new one
 let a4 = a1.concat(a2,a3);
 console.log(a4.length);
+console.log(a4);
 console.log(a4[2],a4[5],a4[8]);
 
 //includes - checks if the array contains it
