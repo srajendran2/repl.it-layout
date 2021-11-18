@@ -1,37 +1,59 @@
-//two dimensional array
-let shuttleCrews = [
-  ['Robert Gibson', 'Mark Lee', 'Mae Jemison'],
-  ['Kent Rominger', 'Ellen Ochoa', 'Bernard Harris'],
-  ['Eilen Collins', 'Winston Scott',  'Catherin Coleman']
-];
+// for loop
+for (let i = 0; i < 5; i++) {
+   console.log(i);
+}
 
-console.log(shuttleCrews[0][2]);
-console.log(shuttleCrews[1][1]);
-console.log(shuttleCrews[2][1]);
-console.log(shuttleCrews);
+// for loop iteration of strings
+let name = "LaunchCode";
 
+for (let i = 0; i < name.length; i++) {
+   console.log(name[i]);
+}
 
-let newCrew = ['Mark Polansky', 'Robert Curbeam', 'Joan Higginbotham'];
+// for loop iteration of arrays
+let languages = ["JS", "Java", "C#", "Python"];
 
-// Add a new crew array to the end of shuttleCrews
-shuttleCrews.push(newCrew);
-console.log(shuttleCrews[3][2]);
-console.log(shuttleCrews);
+for (let i = 0; i < languages.length; i++) {
+   console.log(languages[i]);
+}
 
-// Reverse the order of the crew at index 1
-shuttleCrews[1].reverse();
-console.log(shuttleCrews[1]);
+// reverse string
+let str = "blue";
+let reversed = "";
 
-let school = [
-   ["science", "computer", "art"],
-   ["Jones", "Willoughby", "Rhodes"]
-];
+for (let i = 0; i < str.length; i++) {
+   reversed = str[i] + reversed;
+}
 
-//display jones
-console.log(school[1][0]);
+console.log(reversed);
 
-// add a new row in two dimensional school array
-school.push(["dance"]);
-school[2][1]=("Holmes");
-console.log(school);
+//while loop
+let i = 0;
 
+while (i < 5) {
+   console.log(i);
+   i++;
+}
+
+// loop based on entered value
+// const input = require('readline-sync');
+
+// let num = input.question('Please enter a positive number:');
+// num = Number(num);
+
+// while (num <= 0) {
+//    num = input.question('Invalid input. Please enter a positive number:');
+//    num = Number(num);
+// }
+
+// break statement
+for (let i = 0; i < 4; i++) {
+    
+   console.log("Loop out No" + i)
+
+   if (i > 2) {
+      console.log("Loop in No" + i)
+      break;
+   }
+
+}
